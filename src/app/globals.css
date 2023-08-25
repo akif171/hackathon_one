@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.social_icon {
+  @apply bg-gray-300 p-3 rounded-xl;
+}
+
+.footer_links {
+  @apply text-gray-600 py-4;
+}
+
+.footer_links li {
+  @apply text-gray-600 mt-2 text-lg hover:cursor-pointer;
+}
+
+.footer_link_heading {
+  @apply text-xl text-gray-700 font-bold mt-5 md:mt-0;
+}
+
+.features_grid{
+  @apply w-full h-full
+}
+.features_grid h3{
+  @apply  text-xl sm:text-2xl font-bold mb-5
+}
+
+.features_grid p{
+  @apply mb-5
+}
