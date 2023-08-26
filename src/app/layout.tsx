@@ -1,13 +1,12 @@
 import Navbar from "@/components/views/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import Wrapper from "@/components/shared/Wrapper";
 import Footer from "@/components/views/Footer/page";
 
-const inter = Roboto({
+const inter = Open_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700", "900"],
 });
 
 export const metadata: Metadata = {

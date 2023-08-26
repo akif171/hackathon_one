@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import ProductCard from "@/components/views/ProductCard";
 
-const pages = () => {
+const page = () => {
   return (
-    <div>All Products</div>
-  )
-}
+    <div className="grid grid-cols2 md:grid-cols-4 gap-5 w-full">
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+    </div>
+  );
+};
 
-export default pages
+export default page;

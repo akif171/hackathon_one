@@ -28,3 +28,11 @@
 .features_grid p{
   @apply mb-5
 }
+
+.product_sizes{
+  @apply mt-3
+}
+
+.product_sizes li{
+  @apply p-2 bg-gray-100 rounded-full shadow-lg 
+}

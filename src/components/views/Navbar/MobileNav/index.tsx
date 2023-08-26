@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const MobileNav = () => {
   return (
-    <div className="absolute w-full h-full bg-gray-200 py-7 px-20">
+    <div className="absolute w-full h-full bg-gray-200 py-7 px-5 sm:px-10 lg:px-20 ">
       <div className="flex justify-between items-center">
         <div>
           <Image src={Logo} alt="logo" />

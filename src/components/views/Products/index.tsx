@@ -1,5 +1,5 @@
 import React from "react";
-import SingleProduct from "../SingleProduct";
+import ProductCard from "../ProductCard";
 import HomeProd1 from "../../assets/home_prod.png";
 import HomeProd2 from "../../assets/home_prod2.png";
 import HomeProd3 from "../../assets/home_prod3.png";
@@ -12,9 +12,9 @@ const Products = () => {
         Check What We Offer
       </h2>
       <div className="flex justify-center items-center flex-col md:flex-row gap-3 my-10">
-        <SingleProduct imagesrc={HomeProd1} />
-        <SingleProduct imagesrc={HomeProd2} />
-        <SingleProduct imagesrc={HomeProd3} />
+        <ProductCard  />
+        <ProductCard  />
+        <ProductCard  />
       </div>
     </div>
   );
