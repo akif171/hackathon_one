@@ -32,12 +32,14 @@ const Navbar = () => {
               className="outline-none"
             />
           </div>
-          <div className="hidden lg:flex bg-gray-200 p-3 rounded-full relative">
-            <span className="absolute bg-red-600 p-1 rounded-full right-0 top-0 text-xs text-gray-100">
-              {cartItems}
-            </span>
-            <ShoppingCart />
-          </div>
+          <Link href="/cart">
+            <div className="hidden lg:flex bg-gray-200 p-3 rounded-full relative">
+              <span className="absolute bg-red-600 p-1 rounded-full right-0 top-0 text-xs text-gray-100">
+                {cartItems}
+              </span>
+              <ShoppingCart />
+            </div>
+          </Link>
         </div>
         <div className="lg:hidden" onClick={() => setIsNavOpen(!isNavOpen)}>
           <div className="lg:hidden ">
