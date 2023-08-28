@@ -20,8 +20,8 @@ const Navbar = () => {
         </div>
         <div className="hidden lg:flex justify-between items-center gap-14 ">
           <div className="flex gap-10 text-lg">
-            {NavLinkArray.map((NavItem) => (
-              <Link href={NavItem.href}>{NavItem.label}</Link>
+            {NavLinkArray.map((NavItem,index) => (
+              <Link key={index} href={NavItem.href}>{NavItem.label}</Link>
             ))}
           </div>
           <div className="flex items-center p-1 border border-gray-300 rounded w-80">

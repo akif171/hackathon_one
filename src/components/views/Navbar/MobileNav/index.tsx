@@ -18,8 +18,8 @@ const MobileNav = () => {
         </div>
       </div>
       <div>
-        {NavLinkArray.map((nav) => (
-          <Link href={nav.href}>{nav.label}</Link>
+        {NavLinkArray.map((nav,index) => (
+          <Link key={index} href={nav.href}>{nav.label}</Link>
         ))}
       </div>
     </div>
