@@ -1,25 +1,42 @@
+"use client";
 import Image from "next/image";
-import React from "react";
-import HomeProd from "../../../components/assets/home_prod.png";
+import React, { use, useState } from "react";
 import { ShoppingCart } from "lucide-react";
+import { getSingleProduct } from "../../../../../sanity/sanity.query";
+import { Product } from "../../../../../types";
 
-const page = () => {
+const page = ({ params }: { params: {slug:string} }) => {
+  const { slug } = params;
+
+  const product: Product = use(getSingleProduct(slug));
+
+  console.log(product);
+
+  const [image, setImage] = useState(product.productImage[0]);
+
   return (
     <div className="main_container">
       <div className="flex flex-col lg:flex-row gap-10 w-full mt-10">
         <div className="flex gap-5 w-full lg:w-3/5">
           <div className="slider_images flex flex-col gap-2">
-            <Image src={HomeProd} alt="slider image" width={100} height={100} />
-            <Image src={HomeProd} alt="slider image" width={100} height={100} />
-            <Image src={HomeProd} alt="slider image" width={100} height={100} />
-            <Image src={HomeProd} alt="slider image" width={100} height={100} />
-            <Image src={HomeProd} alt="slider image" width={100} height={100} />
+            {product.productImage.map((image: string, index: number) => (
+              <Image
+                key={index}
+                src={image}
+                alt={product.name}
+                width={100}
+                height={100}
+                className="hover:cursor-pointer"
+              />
+            ))}
           </div>
           <div className="main_image h-full w-full">
             <Image
-              src={HomeProd}
-              alt="main product image"
+              src={image}
+              alt={product.name}
               className="h-full w-full"
+              width={300}
+              height={300}
             />
           </div>
         </div>

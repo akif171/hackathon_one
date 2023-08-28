@@ -2,7 +2,7 @@
 import { Delete, DeleteIcon, ShoppingBag, Trash, Trash2 } from "lucide-react";
 import React, { useState } from "react";
 import Image from "next/image";
-import HomeProd from "../../components/assets/home_prod.png";
+import HomeProd from "../../../components/assets/home_prod.png";
 
 const Cart = () => {
   const [isItems, setIsItems] = useState(true);

@@ -4,7 +4,9 @@ import NewsLetter from "@/components/views/NewsLetter";
 import Products from "@/components/views/Products";
 import Promotion from "@/components/views/Promotion";
 
-export default function Home() {
+export default async function Home() {
+
+
   return (
     <main>
       <Hero />
