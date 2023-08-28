@@ -19,8 +19,8 @@ const Products = async () => {
         Check What We Offer
       </h2>
       <div className="flex justify-between items-center flex-col md:flex-row gap-3 my-10">
-        {products.map((product) => (
-          <Link href={`/${product.tag}/${product.slug}`}>
+        {products.map((product,index) => (
+          <Link key={index} href={`/${product.tag}/${product.slug}`}>
             <ProductCard
               productImage={product.productImage}
               name={product.name}
