@@ -3,7 +3,7 @@ import client from "./sanity.client";
 import { Product } from "../types";
 
 
-export async function getProducts(): Promise<Product[]> {
+export async function getProducts() {
     return client.fetch(
         groq`*[_type == "product"]{
             _id,
@@ -18,7 +18,7 @@ export async function getProducts(): Promise<Product[]> {
     )
 }
 
-export async function getHomeProducts(): Promise<Product[]> {
+export async function getHomeProducts() {
     return client.fetch(
         groq`*[_type == "product"]{
             _id,
@@ -33,7 +33,7 @@ export async function getHomeProducts(): Promise<Product[]> {
     )
 }
 
-export async function getSingleProduct(slug: string): Promise<Product[]> {
+export async function getSingleProduct(slug: string) {
     return client.fetch(
         groq`*[_type == "product" && slug.current == $slug][0]{
             _id,
@@ -49,7 +49,7 @@ export async function getSingleProduct(slug: string): Promise<Product[]> {
 }
 
 
-export async function getFemaleProducts(): Promise<Product[]> {
+export async function getFemaleProducts() {
     return client.fetch(
         groq`*[_type == "product" && tag == "female"]{
             _id,
@@ -65,7 +65,7 @@ export async function getFemaleProducts(): Promise<Product[]> {
 }
 
 
-export async function getMaleProducts(): Promise<Product[]> {
+export async function getMaleProducts() {
     return client.fetch(
         groq`*[_type == "product" && tag == "male"]{
   
@@ -81,7 +81,7 @@ export async function getMaleProducts(): Promise<Product[]> {
     )
 }
 
-export async function getKidsProducts(): Promise<Product[]> {
+export async function getKidsProducts() {
     return client.fetch(
         groq`*[_type == "product" && tag == "kids"]{
   

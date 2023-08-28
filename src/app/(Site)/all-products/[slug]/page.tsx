@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { ShoppingCart } from "lucide-react";
 import { getSingleProduct } from "../../../../../sanity/sanity.query";
-import { Product } from "../../../../../types";
+import type { Product } from "../../../../../types";
 
 const page = async ({ params }: { params: {slug:string} }) => {
   const { slug } = params;
