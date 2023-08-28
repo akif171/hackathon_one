@@ -1,18 +1,16 @@
-"use client";
 import Image from "next/image";
-import React, { use, useState } from "react";
 import { ShoppingCart } from "lucide-react";
 import { getSingleProduct } from "../../../../../sanity/sanity.query";
 import { Product } from "../../../../../types";
 
-const page = ({ params }: { params:{slug:string} }) => {
+const page = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
 
-  const product: Product = use(getSingleProduct(slug));
+  const product: Product = await getSingleProduct(slug);
 
   console.log(product);
 
-  const [image, setImage] = useState(product.productImage[0]);
+  const image = product.productImage[0];
 
   return (
     <div className="main_container">
